@@ -45,10 +45,26 @@ class Building:
         elevator = self.elevators[number]
         elevator.go_to_floor(target_floor)
 
+#for question 3
 
+    def fire_alarm(self):
+        for elevator in self.elevators:
+            elevator.go_to_floor(elevator.bottom)
+
+
+
+
+#for question 2 and 3 both
 # Main program
 building = Building(1, 10, 3)
 
 building.run_elevator(0, 5)
 building.run_elevator(1, 7)
-building.run_elevator(0, 1)
+#building.run_elevator(0, 1)
+
+
+#for question 3
+
+print("FIRE ALARM RINGING!")
+
+building.fire_alarm()
